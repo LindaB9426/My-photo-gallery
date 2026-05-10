@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   color: white;
+  padding-top: 110px;
 }
 html {
   scroll-behavior: smooth;
@@ -17,10 +18,10 @@ html {
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(8px);
-  height: 110px;
+  height: 180px;
   display: flex;
   align-items: center;
 }
 section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 160px;
 }

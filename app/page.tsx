@@ -1,29 +1,43 @@
-import PhotoGallery from "./components/PhotoGallery";
-import Split from "./components/Split";
+
+import Gallery from "./components/Gallery";
+import { galleries } from "./galleries";
+import Footer from "./components/Footer";
+
+
+
+
+
 
 const Home = () => {
   return (
   <>
-      <header
-        className="header"
+      <header 
+        className="header 
+        d-flex 
+        flex-column 
+        align-items-center
+        py-5"
+         
       >
-        <div className="d-flex justify-content-between align-items-center w-100 px-4">
-          <h1 className="display-3 fw-bold m-0 text-black">
-            My Photo Gallery
-          </h1>
-          <nav className="px-4">
-            <a href="#plitvice" className="me-3 text-black fw-bold">
-              Plitvice
-            </a>
-
-            <a href="#split" className="text-black fw-bold">
-              Split
-            </a>
-          </nav>
+      <div className="text-center" >
+        <h1 className="display-3 fw-bold m-0 text-white mb-3">
+          Trip to Croatia
+        </h1>
+        <nav className="px-4 mt-3">
+          <a href="#plitvice" className="me-3 text-white fw-bold">
+            Plitvice
+          </a>
+          <a href="#split" className="me-3 text-white fw-bold">
+            Split
+          </a>
+          <a href="#trogir" className="text-white fw-bold">
+            Trogir
+          </a>
+        </nav>
         </div>  
       </header>
       <section id="plitvice">
-          <div className="d-flex align-items-center p-3 ">
+          <div className="d-flex align-items-center p-3 py-5">
             <div className="container px-4" >
               <h2  className="display-5 fw-bold ">
                 Plitvice Lakes National Park
@@ -41,7 +55,7 @@ const Home = () => {
         </section>
 
       <div className="gallery" >
-          <PhotoGallery />
+          <Gallery photos={galleries.plitvice} />
       </div>
       <section id="split" >
         <div className="d-flex align-items-center p-3 " >
@@ -59,8 +73,27 @@ const Home = () => {
           </div>
         </section>
         <div className="gallery" >
-          <Split/>
+          <Gallery photos={galleries.split} />
         </div>
+        <section id="trogir" >
+        <div className="d-flex align-items-center p-3 " >
+            <div className="container px-4">
+              <h2 className="display-5 fw-bold text-white">
+                Trogir
+              </h2>
+              <p className="lead text-white">
+                Despite the fact that Trogir is thought to be much older, 
+                the findings show us that the city was founded at the end of 3rd century BC or at the beginning of 2nd century BC. 
+                We have discovered far older remnants of stone tools used by Neanderthal people 45,000 years ago in the immediate area of Trogir.
+                The old city centre itself was formerly a part of the mainland, which people's labours helped to split into a small island.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="gallery" >
+          <Gallery photos={galleries.trogir} />
+        </div>
+      <Footer />
     </>
   );
 };
