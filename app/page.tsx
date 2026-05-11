@@ -2,9 +2,12 @@
 import Gallery from "./components/Gallery";
 import { galleries } from "./galleries";
 import Footer from "./components/Footer";
+import { Playfair_Display } from 'next/font/google'
 
-
-
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 
 
@@ -17,13 +20,13 @@ const Home = () => {
         flex-column 
         align-items-center
         py-5"
-         
+        
       >
       <div className="text-center" >
-        <h1 className="display-3 fw-bold m-0 text-white mb-3">
+        <h1 className={`${playfair.className} display-1 fw-bold m-0 text-white mb-3`}>
           Trip to Croatia
         </h1>
-        <nav className="px-4 mt-3">
+        <nav className="px-4 mt-3 ">
           <a href="#plitvice" className="me-3 text-white fw-bold">
             Plitvice
           </a>
@@ -39,7 +42,7 @@ const Home = () => {
       <section id="plitvice">
           <div className="d-flex align-items-center p-3 py-5">
             <div className="container px-4" >
-              <h2  className="display-5 fw-bold ">
+              <h2  className="display-5 fw-bold text-white ">
                 Plitvice Lakes National Park
               </h2>
               <p className="lead text-white">
@@ -58,9 +61,9 @@ const Home = () => {
           <Gallery photos={galleries.plitvice} />
       </div>
       <section id="split" >
-        <div className="d-flex align-items-center p-3 " >
+        <div className="d-flex align-items-center p-3 py-5 " >
             <div className="container px-4">
-              <h2 className="display-5 fw-bold text-white">
+              <h2 className="display-5 fw-bold text-white mb-3" >
                 Split
               </h2>
               <p className="lead text-white">
@@ -75,8 +78,8 @@ const Home = () => {
         <div className="gallery" >
           <Gallery photos={galleries.split} />
         </div>
-        <section id="trogir" >
-        <div className="d-flex align-items-center p-3 " >
+        <section id="trogir">
+        <div className="d-flex align-items-center p-3 py-5" >
             <div className="container px-4">
               <h2 className="display-5 fw-bold text-white">
                 Trogir

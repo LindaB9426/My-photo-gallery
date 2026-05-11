@@ -3,11 +3,11 @@ export const galleries = {
     src: `/images/${i + 1}.jpg`,
   })),
 
-  split: Array.from({ length: 6 }, (_, i) => ({
-    src: `/split/${String.fromCharCode(97 + i)}.jpg`,
+  split: Array.from({ length: 8 }, (_, i) => ({
+    src: `/split/${i + 1}.jpg`,
   })),
 
-  trogir: Array.from({ length: 5 }, (_, i) => ({
+  trogir: Array.from({ length: 8 }, (_, i) => ({
     src: `/trogir/${i + 1}.jpg`,
   })),
 };
