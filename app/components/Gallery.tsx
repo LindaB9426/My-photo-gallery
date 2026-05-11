@@ -50,11 +50,19 @@ const Gallery = ({ photos }: GalleryProps) => {
             backgroundColor: "rgba(0,0,0,0.9)",
           }}
         >
+     
+          <button
+            className="close-btn"
+            onClick={() => setSelectedIndex(null)}
+            >
+            ✕
+          </button>
           <div className="modal-dialog modal-dialog-centered modal-xl">
             <div
               className="modal-content bg-transparent border-0"
               onClick={(e) => e.stopPropagation()}
             >
+                
               <div className="modal-body text-center">
                 <Image
                   src={photos[selectedIndex].src}
@@ -70,40 +78,31 @@ const Gallery = ({ photos }: GalleryProps) => {
                   }}
                 />
                 <button
-                    className="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3"
+                    className="nav-btn left"
                     onClick={(e) => {
                         e.stopPropagation();
-
                         setSelectedIndex(
-                        selectedIndex === 0
-                            ? photos.length - 1
-                            : selectedIndex - 1
+                        selectedIndex === 0 ? photos.length - 1 : selectedIndex - 1
                         );
                     }}
                     >
-                    ←
-                </button>
-
-                <button
-                    className="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3"
+                    ‹
+                    </button>
+                    <button
+                    className="nav-btn right"
                     onClick={(e) => {
                         e.stopPropagation();
-
                         setSelectedIndex(
-                        selectedIndex === photos.length - 1
-                            ? 0
-                            : selectedIndex + 1
+                        selectedIndex === photos.length - 1 ? 0 : selectedIndex + 1
                         );
                     }}
                     >
-                    →
+                    ›
                 </button>
               </div>
             </div>
           </div>
         </div>
-        
-        
       )}
     </div>
   );

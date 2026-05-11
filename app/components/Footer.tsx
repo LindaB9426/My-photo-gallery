@@ -12,7 +12,7 @@ export default function Footer() {
       }}
     >
       <p style={{ margin: 0 }}>
-        © {new Date().getFullYear()} Trip to Croatia. All rights reserved.
+        Trip to Croatia. All rights reserved © {new Date().getFullYear()}
       </p>
     </footer>
   );

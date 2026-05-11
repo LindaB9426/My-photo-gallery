@@ -1,6 +1,6 @@
 export const galleries = {
   plitvice: Array.from({ length: 8 }, (_, i) => ({
-    src: `/images/${i + 1}.jpg`,
+    src: `/plitvice/${i + 1}.jpg`,
   })),
 
   split: Array.from({ length: 8 }, (_, i) => ({
