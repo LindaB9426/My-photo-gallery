@@ -44,18 +44,6 @@ nav a:hover {
   color: #9ed0ff !important;
 }
 
-.card img {
-  transition: transform 0.4s ease;
-}
-
-.card img:hover {
-  transform: scale(1.05);
-}
-
-section {
-  scroll-margin-top: 220px;
-}
-
 .hero-title {
   font-size: clamp(3rem, 10vw, 8rem);
   font-weight: 700;
@@ -69,6 +57,11 @@ section {
     0 10px 30px rgba(0,0,0,0.5);
 }
 
+.section {
+  scroll-margin-top: 140px;
+}
+
+
 .section-title::after {
   content: "";
   display: block;
@@ -78,6 +71,16 @@ section {
   background: white;
   border-radius: 10px;
 }
+
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+
 
 .lead {
   font-size: 1.2rem;
