@@ -20,7 +20,8 @@ const Gallery = ({ photos }: GalleryProps) => {
         {photos.map((photo, index) => (
           <div
             key={index}
-            className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+            className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4"
+           
           >
             <div className="card h-100 shadow-sm bg-dark border-0 overflow-hidden">
               <Image
