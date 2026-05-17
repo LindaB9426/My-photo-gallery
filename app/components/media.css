@@ -38,7 +38,7 @@
 
 @media (max-width: 768px) {
   section {
-    scroll-margin-top: 160px;
+    scroll-margin-top: 120px;
   }
 
   .container {
