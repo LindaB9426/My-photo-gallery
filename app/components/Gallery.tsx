@@ -52,6 +52,7 @@ const Gallery = ({ photos }: GalleryProps) => {
         >
             <div
                 className="position-fixed top-0 start-0 w-100 h-100"
+                style={{ zIndex: 1 }}
                 onClick={() => setSelectedIndex(null)}
             />
      
@@ -61,7 +62,7 @@ const Gallery = ({ photos }: GalleryProps) => {
             >
             ✕
           </button>
-          <div className="modal-dialog modal-dialog-centered modal-xl">
+          <div className="modal-dialog modal-dialog-centered modal-xl position-relative">
             <div
               className="modal-content bg-transparent border-0"
               onClick={(e) => e.stopPropagation()}

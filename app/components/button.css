@@ -74,3 +74,35 @@
 .close-btn:active {
   transform: scale(0.95);
 }
+.close-btn,
+.nav-btn {
+  z-index: 9999;
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .close-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .nav-btn.left {
+    left: 10px;
+  }
+
+  .nav-btn.right {
+    right: 10px;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 10px;
+  }
+}
