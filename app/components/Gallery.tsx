@@ -28,6 +28,7 @@ const Gallery = ({ photos }: GalleryProps) => {
                 alt={`image-${index}`}
                 width={800}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 25vw"
                 style={{
                   objectFit: "cover",
                   height: "250px",
@@ -44,12 +45,15 @@ const Gallery = ({ photos }: GalleryProps) => {
       {/* MODAL */}
       {selectedIndex !== null && (
         <div
-          className="modal d-block"
-          onClick={() => setSelectedIndex(null)}
-          style={{
-            backgroundColor: "rgba(0,0,0,0.9)",
-          }}
+            className="modal d-block"
+            style={{
+                backgroundColor: "rgba(0,0,0,0.9)",
+            }}
         >
+            <div
+                className="position-fixed top-0 start-0 w-100 h-100"
+                onClick={() => setSelectedIndex(null)}
+            />
      
           <button
             className="close-btn"
