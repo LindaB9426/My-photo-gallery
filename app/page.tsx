@@ -23,9 +23,11 @@ const Home = () => {
         
       >
       <div className="text-center" >
-        <h1 className={`${playfair.className}  hero-title display-1 fw-bold m-0 text-white mb-3`}>
-          Trip to Croatia
-        </h1>
+        <a href="/" className="text-decoration-none">
+          <h1 className={`${playfair.className}  hero-title display-1 fw-bold m-0 text-white mb-3`}>
+            Trip to Croatia
+          </h1>
+        </a>
         <nav className="px-4 mt-3 ">
           <a href="#plitvice" className="me-3 text-white fw-bold">
             Plitvice
@@ -33,8 +35,11 @@ const Home = () => {
           <a href="#split" className="me-3 text-white fw-bold">
             Split
           </a>
-          <a href="#trogir" className="text-white fw-bold">
+          <a href="#trogir" className="me-3 text-white fw-bold">
             Trogir
+          </a>
+          <a href="#bibinje" className="text-white fw-bold">
+            Bibinje
           </a>
         </nav>
         </div>  
@@ -95,6 +100,26 @@ const Home = () => {
         </section>
         <div className="gallery" >
           <Gallery photos={galleries.trogir} />
+        </div>
+        <section id="bibinje">
+        <div className="d-flex align-items-center p-3 py-5" >
+            <div className="container px-4">
+              <h2 className={`${playfair.className} section-title display-5 fw-bold text-white`}>
+                Bibinje
+              </h2>
+              <p className="lead text-white">
+                Bibinje is a small town in southern Croatia near Zadar. 
+                It is next to the Adriatic Sea and has beautiful beaches and walking paths along the coast. 
+                About 4,000 people live there.
+                Bibinje has a long history and has been inhabited since Roman times. The town was named after Vibius, a Roman man who owned land there. 
+                In the past, people mostly worked in farming, fishing, and raising animals.
+                Today, Bibinje is a quiet and popular place for tourists because of its sea, nature, and relaxing atmosphere.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="gallery" >
+          <Gallery photos={galleries.bibinje} />
         </div>
       <Footer />
     </>
